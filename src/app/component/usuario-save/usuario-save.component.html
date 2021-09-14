@@ -1,0 +1,46 @@
+
+
+
+<div *ngIf ="showMsg"> {{messages}} </div>
+
+<div class="card-body" style="margin: 20px;">
+    
+    <div>
+    <input type="email"  class="input-field" placeholder="Email"
+    [(ngModel)]="usuario.email" name="email" required/>
+    </div>
+
+    <div>
+    <input type="password"  class="input-field" placeholder="Password"
+    [(ngModel)]="usuario.password" name="password" required/>
+    </div>
+
+    <div>
+    <input type="text"  class="input-field" placeholder="Nombre completo"
+    [(ngModel)]="usuario.nombre" name="nombre" required/>
+    </div>
+
+    <div class ="contenido">
+    <input type="text"  class="input-field" placeholder="Apellido completo"
+    [(ngModel)]="usuario.apellido" name="apellido" required/>
+    </div>  
+
+    <div class ="contenido">
+      <label for="inputState">Enable</label>
+      <select name="enable" id="enable" #enable [(ngModel)]="usuario.enable" > Enable
+        <option *ngFor="let enable of enables" [value]="enable.id">{{enable.name}}</option>
+      </select>
+    </div>
+
+    <div class ="contenido">
+        <label for="inputState">Tipo usuario</label>
+        <select name="tipo" id="tipo" #tipo [(ngModel)]="usuario.tipo_rol" > Enable
+          <option *ngFor="let tipo of tipos" [value]="tipo.id"> {{tipo.name}} </option>
+        </select>
+    </div>
+  
+
+    <button class="btn btn-success" (click)="save()"> SAVE </button>
+    <button class="btn btn-danger" routerLink="/usuario-list"> CANCEL</button>
+
+</div>

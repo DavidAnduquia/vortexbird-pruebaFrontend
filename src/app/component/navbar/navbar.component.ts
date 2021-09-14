@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class AppComponent {
-  title = 'vortexbird-prueba-frotend';
+export class NavbarComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 
   public declare nombreUsuario: any;
   

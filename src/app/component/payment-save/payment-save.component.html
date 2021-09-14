@@ -1,0 +1,18 @@
+
+<div *ngIf ="showMsg"> {{messages}} </div>
+
+<div class="card-body" style="margin: 20px;">
+    
+    <input type="text"  class="input-field" placeholder="Nombre del método de pago"
+    [(ngModel)]="payment.nombre" name="nombre" required/>
+      
+    <div class ="contenido">
+      <label for="inputState">Enable</label>
+      <select name="enable" id="enable" #enable [(ngModel)]="payment.enable" > Enable
+        <option *ngFor="let enable of enables" [value]="enable.id">{{enable.name}}</option>
+      </select>
+    </div>
+
+    <button class="btn btn-success" (click)="save()"> SAVE </button>
+
+</div>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pruebavortex-f5d90": {
+      "hosting": {
+        "vortexbird-prueba-frotend": [
+          "pruebavortex-f5d90"
+        ]
+      }
+    }
+  }
+}

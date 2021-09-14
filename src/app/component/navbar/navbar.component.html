@@ -1,0 +1,25 @@
+
+<style>
+ 
+
+    .toolbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      background-color: #97d5e7;
+      color: white;
+      font-weight: 600;
+    }
+  
+  </style>
+ 
+<div class="toolbar" role="banner">
+  <div  *ngIf="isAuth()">
+  <button routerLink="/login" class="buttonLogout"> Administrar peliculas</button>            
+  <button routerLink="/login" class="buttonLogout"> Administrar usuarios</button>            
+  </div>
+</div>

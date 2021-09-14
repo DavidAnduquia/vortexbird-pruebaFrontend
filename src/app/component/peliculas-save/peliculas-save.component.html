@@ -1,0 +1,44 @@
+<p>peliculas-save works!</p>
+
+
+
+<div *ngIf ="showMsg"> {{messages}} </div>
+
+
+<!-- (change)="upload($event)" -->
+
+
+
+
+<div class="card-body" style="margin: 20px;">
+  <div class ="contenido">
+    <input type="email"  class="input-field" placeholder="Nombre de la pelicula"   [(ngModel)]="pelicula.nombre_pelicula" name="nombre" required/>
+  </div>
+
+  <div class ="contenido">
+    <input type="text"  class="input-field" placeholder="Descripcion"   [(ngModel)]="pelicula.descripcion" name="descripcion" required/>
+  </div>
+
+  <div class ="contenido">
+    <input type="text"  class="input-field" placeholder="Estreno"   [(ngModel)]="pelicula.estreno" name="estreno" required/>
+  </div>
+
+
+  <div class ="contenido">
+    <input type="text"  class="input-field" placeholder="Duracion"   [(ngModel)]="pelicula.duracion" name="duracion" required/>
+  </div>
+  
+  <div class ="contenido">
+    <label for="inputState">Enable</label>
+    <select name="enable" id="enable" #enable [(ngModel)]="pelicula.enable" > Enable
+      <option *ngFor="let enable of enables" [value]="enable.id">{{enable.name}}</option>
+    </select>
+  </div>
+
+
+
+
+
+  <button class="btn btn-success" (click)="save()"> SAVE </button>
+  <button class="btn btn-danger" routerLink="/pelicula-list"> CANCEL</button>
+</div>
